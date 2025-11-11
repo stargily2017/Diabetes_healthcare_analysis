@@ -141,7 +141,7 @@ order by Time_in_days Desc;
  that combines two or more string values into a single string.
  /*
  
-   SELECT 
+SELECT 
     CONCAT('Patient ',
             health.patient_nbr,
             ' was ',
@@ -183,13 +183,13 @@ CASE when num_lab_procedures >=0
     ---- I used Where clause to find the the specific data
     ----------------------------------------
     
-	SELECT patient_nbr FROM patient.demographics 
-	where race = 'Indian'
-	UNION
-	SELECT patient_nbr FROM patient.health
-	where metformin = 'up';
-	--------------------------------------
- ----- Number of procedures cahmged to INT.   
+SELECT patient_nbr FROM patient.demographics 
+where race = 'Indian'
+UNION
+SELECT patient_nbr FROM patient.health
+where metformin = 'up';
+--------------------------------------
+----- Number of procedures cahmged to INT.   
 SELECT avg(CAST(num_medications AS float)) FROM health;
 ALTER TABLE health
 MODIFY COLUMN num_procedures INT;
