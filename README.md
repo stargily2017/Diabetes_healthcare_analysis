@@ -29,12 +29,14 @@ You can learn more about this data set here.
 
 ### Descriptive and diagnostic analysis 
 Focus on how many days patients stayed in the hospital
-SELECT round(CAST(time_in_hospital AS Decimal), 1) AS Time_in_days,
-count(*) AS patients_count,
-rpad('', count(*)/200,'*') AS bar
-FROM health
-group by Time_in_days
-order by Time_in_days Desc;
+SELECT round(CAST(time_in_hospital AS Decimal), 1) AS Time_in_days,/
+count(*) AS patients_count,/
+rpad('', count(*)/200,'*') AS bar/
+FROM health/
+group by Time_in_days/
+order by Time_in_days Desc;/
+<img width="596" height="209" alt="image" src="https://github.com/user-attachments/assets/4a55b26f-62e7-424d-8c5b-83828a99f7cc" />
+
 
 
 ### Results and Personal Reflections:
